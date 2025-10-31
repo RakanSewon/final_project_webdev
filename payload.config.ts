@@ -4,6 +4,7 @@ import sharp from "sharp";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
 import { Edu } from "./src/collection/edu"
+
 // import { Papers } from "./src/collections/Paper";
 // import { Media } from "./src/collections/Media";
 
@@ -42,14 +43,14 @@ export default buildConfig({
       config: {
         endpoint: process.env.S3_ENDPOINT,
         credentials: {
-          accessKeyId: process.env.S3_ACCESS_KEY_ID,
-          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+          accessKeyId: process.env.S3_ACCESS_KEY_ID!,
+          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
         },
         region: process.env.S3_REGION,
         // Opsi ini penting agar URL yang dihasilkan oleh Payload benar
         forcePathStyle: true,
       },
-      bucket: process.env.S3_BUCKET,
+      bucket: process.env.S3_BUCKET!,
     }),
   ],
   sharp,
