@@ -4,8 +4,9 @@ import { withPayload } from "@payloadcms/next/withPayload";
 const nextConfig: import('next').NextConfig = {
   // Your Next.js config here
   reactCompiler: false,
+  turbopack:{},
   experimental: {
-    // reactCompiler: false,
+    //turbo: false,
   },
 };
 
