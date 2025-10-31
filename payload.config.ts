@@ -3,6 +3,7 @@ import { s3Storage } from "@payloadcms/storage-s3";
 import sharp from "sharp";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { buildConfig } from "payload";
+import { Edu } from "./src/collection/edu"
 // import { Papers } from "./src/collections/Paper";
 // import { Media } from "./src/collections/Media";
 
@@ -11,7 +12,7 @@ export default buildConfig({
   editor: lexicalEditor(),
 
   // Define and configure your collections in this array
-  //collections: [Papers, Media],
+  collections: [Edu],
 
   // Payload Secret
   secret: process.env.PAYLOAD_SECRET || "",
