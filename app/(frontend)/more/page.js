@@ -14,7 +14,7 @@ export default function More() {
   useEffect(() => {
     const init = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/edu");
+        const response = await axios.get("https://final-project-webdev-six.vercel.app/api/edu");
         // Simpan hanya array data konten
         setData(response.data.docs); 
       } catch (error) {
